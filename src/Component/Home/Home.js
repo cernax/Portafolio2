@@ -1,34 +1,23 @@
+import { useState, useRef, useEffect } from 'react'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Fab from '@mui/material/Fab';
 import Perfiles from '../Home/Perfil';
 
-
-  
-
 export default function Inicio() {
+    const scrollHandle = (e, idname) => {
+        e.preventDefault();
+        let position = document.getElementById(idname); //removing extra last - (dash)
+        position && position.scrollIntoView({ behavior: "smooth", block: "start" }) //scrolling the page
+    }
 
-    const reveal = async () => {
-        debugger;
-        var reveals = document.querySelectorAll(".reveal");
-      
-        for (var i = 0; i < reveals.length; i++) {
-          var windowHeight = window.innerHeight;
-          var elementTop = reveals[i].getBoundingClientRect().top;
-          var elementVisible = 150;
-      
-          if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-          } else {
-            reveals[i].classList.remove("active");
-          }
-        }
-      }
+    useEffect( () =>{
 
+    },[] )
     return (
         <>
-        <div className="container" >
+        <div className="container" id="header" >
             <div className="centered">
                 <h3><span>Andres Corro</span></h3>
                 <h2>Desarrollador Web</h2>
@@ -36,9 +25,8 @@ export default function Inicio() {
                 <GitHubIcon />
             </div>
             <div>
-                <Fab color="primary" aria-label="add" style={{top:'90%', left:'48.5%', position:'absolute', transform: 'translate('-90%', '-48.5%')' }} 
-                    href="#personalinfo"
-                >
+                <Fab  color="primary" aria-label="add" style={{ top:'90%', left:'48.5%', position:'absolute', transform: 'translate('-90%', '-48.5%')' }}
+                    href="#personalinfo" onClick={ (e) => scrollHandle(e, "personalinfo")}>
                     <KeyboardArrowDownIcon />
                 </Fab>
             </div>
@@ -55,6 +43,7 @@ export default function Inicio() {
                         -webkit-background-size: cover !important;
                         text-align: center;
                         overflow: hidden;
+                        transition:width 0.3s ease-in-out 0s;
                         position: relative;
                         text-align: center;
                         color: white;
@@ -101,25 +90,12 @@ export default function Inicio() {
                         }
                         }
                     }
-        `}</style>  
-            <div  className="reveal" onScroll={reveal} >
+        `}</style>
+            <div>
                 <div id='personalinfo' style={{ height:'1450px' }}>
                 <Perfiles />
                 </div>
             </div>
-        <style jsx>{`
-        .reveal{
-            position: relative;
-            transform: translateY(150px);
-            opacity: 0;
-            transition: 1s all ease;
-          }
-          
-          .reveal.active{
-            transform: translateY(0);
-            opacity: 1;
-          }
-        `}</style>
         </>
     )
 }
