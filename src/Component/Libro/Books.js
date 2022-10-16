@@ -36,7 +36,7 @@ export default function Books() {
     };
   
     return (
-      <Box sx={{ width: '100%', minHeight: 377 }}>
+      <Box sx={{ width: '100%', minHeight: 377, paddingTop: '3%' }}>
         <Nav getLibros={getBooks} getNameLibros={(value) => setnamebook(value)} setPage={(value) => setPage(value)} setSearchStatus={search} nameNav={"Libros"}  />
         <br/>
         <Box sx={{ width: '100%', minHeight: 377 }}>

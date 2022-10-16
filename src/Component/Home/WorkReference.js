@@ -18,12 +18,12 @@ export default function WorkReference() {
             <div style={{ width:'100%', display:'flex'}} >
                 <div style={{ width:'50%'  }} >       
                     <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-                    <ListItem alignItems="flex-start">
+                    <ListItem alignItems="flex-start" sx={{ paddingTop:'2%', paddingBottom:'5%' }}>
                         <ListItemAvatar>
                             <TripOriginIcon sx={{ color:'#39c0ed' }} />
                         </ListItemAvatar>
                         <ListItemText
-                        primary="Brunch this weekend?"
+                        primary="GETS S.A"
                         secondary={
                             <React.Fragment>
                             <Typography
@@ -32,20 +32,20 @@ export default function WorkReference() {
                                 variant="body2"
                                 color="text.primary"
                             >
-                                Ali Connors
+                                QA Analyst
                             </Typography>
-                            {" — I'll be in your neighborhood doing errands this…"}
+                            {" — Concept tests, test automation, process documentation, technical support."}
                             </React.Fragment>
                         }
                         />
                     </ListItem>
                     <Divider variant="inset" component="li" />
-                    <ListItem alignItems="flex-start">
+                    <ListItem alignItems="flex-start" sx={{ paddingTop:'2%', paddingBottom:'5%' }}>
                         <ListItemAvatar>
                             <TripOriginIcon sx={{ color:'#39c0ed' }} />
                         </ListItemAvatar>
                         <ListItemText
-                        primary="Brunch this weekend?"
+                        primary="CMetrix"
                         secondary={
                             <React.Fragment>
                             <Typography
@@ -54,20 +54,20 @@ export default function WorkReference() {
                                 variant="body2"
                                 color="text.primary"
                             >
-                                Ali Connors
+                                Support Engineer - SharePoint Consultant
                             </Typography>
-                            {" — I'll be in your neighborhood doing errands this…"}
+                            {" — Mention and resolution of incidents on the dynamics 365 and onpremise tool. Creation of custom developments in sharepoint and workflows with automation and app with powerapps"}
                             </React.Fragment>
                         }
                         />
                     </ListItem>
                     <Divider variant="inset" component="li" />
-                    <ListItem alignItems="flex-start">
+                    <ListItem alignItems="flex-start" sx={{ paddingTop:'2%', paddingBottom:'5%' }}>
                         <ListItemAvatar>
                             <TripOriginIcon sx={{ color:'#39c0ed' }} />
                         </ListItemAvatar>
                         <ListItemText
-                        primary="Brunch this weekend?"
+                        primary="XMS"
                         secondary={
                             <React.Fragment>
                             <Typography
@@ -76,9 +76,9 @@ export default function WorkReference() {
                                 variant="body2"
                                 color="text.primary"
                             >
-                                Ali Connors
+                                BS Support
                             </Typography>
-                            {" — I'll be in your neighborhood doing errands this…"}
+                            {" — creation, modification and analysis of solutions in .net of massive loads, console, api's web service, plugin and custom workflow activity, flows in automation and applications with powerapps for crm 365 and sharepoint"}
                             </React.Fragment>
                         }
                         />
@@ -89,12 +89,12 @@ export default function WorkReference() {
                 <div  style={{ width:'20%' }} ></div>
                 <div style={{ width:'50%' }} >       
                     <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-                    <ListItem alignItems="flex-start">
+                    <ListItem alignItems="flex-start" sx={{ paddingTop:'2%', paddingBottom:'5%' }}>
                         <ListItemAvatar>
                             <TripOriginIcon sx={{ color:'#39c0ed' }} />
                         </ListItemAvatar>
                         <ListItemText
-                        primary="Brunch this weekend?"
+                        primary="DIMENSIÓN"
                         secondary={
                             <React.Fragment>
                             <Typography
@@ -103,20 +103,20 @@ export default function WorkReference() {
                                 variant="body2"
                                 color="text.primary"
                             >
-                                Ali Connors
+                                Web Developer
                             </Typography>
-                            {" — I'll be in your neighborhood doing errands this…"}
+                            {" — resolution of incidents, massive and unitary management in night processes in collection systems"}
                             </React.Fragment>
                         }
                         />
                     </ListItem>
                     <Divider variant="inset" component="li" />
-                    <ListItem alignItems="flex-start">
+                    <ListItem alignItems="flex-start" sx={{ paddingTop:'2%', paddingBottom:'15%' }}>
                         <ListItemAvatar>
                             <TripOriginIcon sx={{ color:'#39c0ed' }} />
                         </ListItemAvatar>
                         <ListItemText
-                        primary="Brunch this weekend?"
+                        primary="VISUALMENTE"
                         secondary={
                             <React.Fragment>
                             <Typography
@@ -125,20 +125,20 @@ export default function WorkReference() {
                                 variant="body2"
                                 color="text.primary"
                             >
-                                Ali Connors
+                                Sharepoint Developer
                             </Typography>
-                            {" — I'll be in your neighborhood doing errands this…"}
+                            {" — creation, modification and maintenance of developments on sharepoint edition of form and consumption of native api's"}
                             </React.Fragment>
                         }
                         />
                     </ListItem>
                     <Divider variant="inset" component="li" />
-                    <ListItem alignItems="flex-start">
+                    <ListItem alignItems="flex-start" sx={{ paddingTop:'2%', paddingBottom:'17%' }}>
                         <ListItemAvatar>
                             <TripOriginIcon sx={{ color:'#39c0ed' }} />
                         </ListItemAvatar>
                         <ListItemText
-                        primary="Brunch this weekend?"
+                        primary="Coopeuch"
                         secondary={
                             <React.Fragment>
                             <Typography
@@ -147,9 +147,9 @@ export default function WorkReference() {
                                 variant="body2"
                                 color="text.primary"
                             >
-                                Ali Connors
+                                CRM Developer
                             </Typography>
-                            {" — I'll be in your neighborhood doing errands this…"}
+                            {" — maintenance, resolution of incidents, creation of plugin, web service, workflow and custom workflow activity on crm onpremise"}
                             </React.Fragment>
                         }
                         />

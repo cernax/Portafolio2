@@ -4,6 +4,10 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Fab from '@mui/material/Fab';
 import Perfiles from '../Home/Perfil';
+import Image from 'next/image';
+import imguser from '../img/imguser.jpg';
+import { Container } from '@mui/material';
+
 
 export default function Inicio() {
     const scrollHandle = (e, idname) => {
@@ -17,83 +21,36 @@ export default function Inicio() {
     },[] )
     return (
         <>
-        <div className="container" id="header" >
-            <div className="centered">
-                <h3><span>Andres Corro</span></h3>
-                <h2>Desarrollador Web</h2>
-                <LinkedInIcon />
-                <GitHubIcon />
+            <div id="header" >                 
+                <Container maxWidth="lg" sx={{ display:'flex', height:'100%', paddingTop: '15%', paddingBottom: '15%' }} >
+                    <div style={{ width:'40%', paddingLeft:'18%' }}>                             
+                        <div className="content">
+                            <h1><span>Hi, I'm Andres, Web Developer.</span></h1>
+                            <LinkedInIcon />
+                            <GitHubIcon />
+                        </div>
+                    </div>
+                    <div style={{ width:'10%' }}></div>
+                    <div style={{ width:'60%'}}>                    
+                        <Image
+                            src={imguser}
+                            alt='user profile picture'                        
+                            width={300}
+                            height={300}
+                            style={{ borderRadius:'10%' }}
+                        />
+                    </div>
+                </Container>           
+                <div>
+                    <Fab color="primary" aria-label="add" style={{ top:'90%', left:'48.5%', position:'absolute', transform: 'translate('-90%', '-48.5%')' }}
+                        href="#personalinfo" onClick={ (e) => scrollHandle(e, "personalinfo")}>
+                        <KeyboardArrowDownIcon />
+                    </Fab>
+                </div>
             </div>
             <div>
-                <Fab  color="primary" aria-label="add" style={{ top:'90%', left:'48.5%', position:'absolute', transform: 'translate('-90%', '-48.5%')' }}
-                    href="#personalinfo" onClick={ (e) => scrollHandle(e, "personalinfo")}>
-                    <KeyboardArrowDownIcon />
-                </Fab>
-            </div>
-        </div>
-        <style jsx>{`
-
-                    .container {   
-                        position: relative;
-                        height: 93.5vh;
-                        min-height: 100%;
-                        width: 100%;
-                        background: #161415 url(https://www.grupodigital.eu/blog/wp-content/uploads/2019/11/gamer-decorative-illustration-flat-design_23-2148250394-e1574340136197.jpg) no-repeat top center;
-                        background-size: cover !important;
-                        -webkit-background-size: cover !important;
-                        text-align: center;
-                        overflow: hidden;
-                        transition:width 0.3s ease-in-out 0s;
-                        position: relative;
-                        text-align: center;
-                        color: white;
-                    }
-
-                    /* Centered text */
-                    .centered {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    }
-                    h3 {
-                        text-align: center;
-                        display: block;
-                        overflow: hidden;
-                        margin: 15px 20px 0;
-                        font-size: 2.5rem;
-                        
-                        span {
-                        font-weight: 100;
-                        height: 30px;
-                        position: relative;
-                        display: inline-block;
-                        font-size: 20px;
-                        
-                        &::before,
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            top: 35%;
-                            height: 1px;
-                            background: #757575;
-                            width: 99999px;
-                        }
-                        
-                        &::before {
-                            left: 100%;
-                            margin-left: 60px;
-                        }
-                        &::after {
-                            right: 100%;
-                            margin-right: 60px;
-                        }
-                        }
-                    }
-        `}</style>
-            <div>
-                <div id='personalinfo' style={{ height:'1450px' }}>
-                <Perfiles />
+                <div id='personalinfo' style={{ height:'1400px' }}>
+                    <Perfiles />
                 </div>
             </div>
         </>

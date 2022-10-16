@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import * as React from 'react';
 
 export default function Education() {
+
     return (
         <>
             <Typography sx={{ display: 'flex', width:'50%' }} component="span" variant="h4" color="text.primary">                    
@@ -24,7 +25,7 @@ export default function Education() {
                             <TripOriginIcon sx={{ color:'#20c997' }} />
                         </ListItemAvatar>
                         <ListItemText
-                        primary="Brunch this weekend?"
+                        primary="CFT Simon Bolivar"
                         secondary={
                             <React.Fragment>
                             <Typography
@@ -33,9 +34,8 @@ export default function Education() {
                                 variant="body2"
                                 color="text.primary"
                             >
-                                Ali Connors
+                                Systems Analysis Technician
                             </Typography>
-                            {" — I'll be in your neighborhood doing errands this…"}
                             </React.Fragment>
                         }
                         />
@@ -46,7 +46,7 @@ export default function Education() {
                             <TripOriginIcon sx={{ color:'#20c997' }} />
                         </ListItemAvatar>
                         <ListItemText
-                        primary="Brunch this weekend?"
+                        primary="Microsoft"
                         secondary={
                             <React.Fragment>
                             <Typography
@@ -55,31 +55,8 @@ export default function Education() {
                                 variant="body2"
                                 color="text.primary"
                             >
-                                Ali Connors
+                                Microsoft Power Platform Functional Consultant
                             </Typography>
-                            {" — I'll be in your neighborhood doing errands this…"}
-                            </React.Fragment>
-                        }
-                        />
-                    </ListItem>
-                    <Divider variant="inset" component="li" />
-                    <ListItem alignItems="flex-start">
-                        <ListItemAvatar>
-                            <TripOriginIcon sx={{ color:'#20c997' }} />
-                        </ListItemAvatar>
-                        <ListItemText
-                        primary="Brunch this weekend?"
-                        secondary={
-                            <React.Fragment>
-                            <Typography
-                                sx={{ display: 'inline' }}
-                                component="span"
-                                variant="body2"
-                                color="text.primary"
-                            >
-                                Ali Connors
-                            </Typography>
-                            {" — I'll be in your neighborhood doing errands this…"}
                             </React.Fragment>
                         }
                         />
@@ -95,7 +72,7 @@ export default function Education() {
                             <TripOriginIcon sx={{ color:'#20c997' }} />
                         </ListItemAvatar>
                         <ListItemText
-                        primary="Brunch this weekend?"
+                        primary="AIEP"
                         secondary={
                             <React.Fragment>
                             <Typography
@@ -104,9 +81,8 @@ export default function Education() {
                                 variant="body2"
                                 color="text.primary"
                             >
-                                Ali Connors
+                                Systems Analysis Engineer
                             </Typography>
-                            {" — I'll be in your neighborhood doing errands this…"}
                             </React.Fragment>
                         }
                         />
@@ -117,7 +93,7 @@ export default function Education() {
                             <TripOriginIcon sx={{ color:'#20c997' }} />
                         </ListItemAvatar>
                         <ListItemText
-                        primary="Brunch this weekend?"
+                        primary="Microsoft"
                         secondary={
                             <React.Fragment>
                             <Typography
@@ -126,31 +102,8 @@ export default function Education() {
                                 variant="body2"
                                 color="text.primary"
                             >
-                                Ali Connors
+                                Microsoft Dynamics 365 Sales
                             </Typography>
-                            {" — I'll be in your neighborhood doing errands this…"}
-                            </React.Fragment>
-                        }
-                        />
-                    </ListItem>
-                    <Divider variant="inset" component="li" />
-                    <ListItem alignItems="flex-start">
-                        <ListItemAvatar>
-                            <TripOriginIcon sx={{ color:'#20c997' }} />
-                        </ListItemAvatar>
-                        <ListItemText
-                        primary="Brunch this weekend?"
-                        secondary={
-                            <React.Fragment>
-                            <Typography
-                                sx={{ display: 'inline' }}
-                                component="span"
-                                variant="body2"
-                                color="text.primary"
-                            >
-                                Ali Connors
-                            </Typography>
-                            {" — I'll be in your neighborhood doing errands this…"}
                             </React.Fragment>
                         }
                         />

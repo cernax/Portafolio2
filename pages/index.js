@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <div>
-      <Nav nameNav={'Home'} />
+      <Nav nameNav={'Curriculum Vitae'} />
       <Inicio />
     </div>
   )

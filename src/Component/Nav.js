@@ -20,11 +20,12 @@ import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import LocalMoviesIcon from '@mui/icons-material/LocalMovies';
-import HomeIcon from '@mui/icons-material/Home';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Fade from '@mui/material/Fade';
 import Fab from '@mui/material/Fab';
+import PropTypes from 'prop-types';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -75,15 +76,19 @@ const ScrollTop = (props) => {
     // This is only being set here because the demo is in an iframe.
     const trigger = useScrollTrigger({
         target: window ? window() : undefined,
-        disableHysteresis: true,
+        disableHysteresis: false,
         threshold: 100,
     });
 
     const handleClick = (event) => {
-        debugger;
-        event.preventDefault();
-        let position = document.getElementById("navmenu"); //removing extra last - (dash)
-        position && position.scrollIntoView({ behavior: "smooth" }) //scrolling the page
+
+        const anchor = (event.target.ownerDocument || document).querySelector('#navmenu',);
+    
+        if (anchor) {
+          anchor.scrollIntoView({
+            behavior: "smooth",
+          });
+        }
     };
     return (
         <Fade in={trigger}>
@@ -113,6 +118,15 @@ const ElevationScroll = (props) => {
         elevation: trigger ? 4 : 0,
     });
 }
+
+ScrollTop.propTypes = {
+  children: PropTypes.element.isRequired,
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
+};
 
 export default function Nav(props) {
     
@@ -157,9 +171,9 @@ export default function Nav(props) {
               <Link href='/'>
                 <ListItemButton>
                   <ListItemIcon>
-                    <HomeIcon /> 
+                    <AccountBoxIcon /> 
                   </ListItemIcon>
-                  <ListItemText primary='Home' />
+                  <ListItemText primary='Curriculum Vitae' />
                 </ListItemButton>
               </Link>
           </ListItem>
@@ -197,61 +211,62 @@ export default function Nav(props) {
     }
 
 	return (
-    <Box sx={{ flexGrow: 1 }} id="navmenu">
-
-        <ElevationScroll {...props}>
-            <AppBar position="static">
-                <Toolbar>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="open drawer"
-                sx={{ mr: 2 }}
-                onClick={toggleDrawer('left', true)}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Drawer
-                anchor={'left'}
-                open={state['left']}
-                onClose={toggleDrawer('left', false)}
-              >
-                {list('left')}
-              </Drawer>
-                <Typography
-                  variant="h6"
-                  noWrap
-                  component="div"
-                  sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+    <React.Fragment>
+      <Box sx={{ flexGrow: 1 }} id="navmenu">
+          <ElevationScroll {...props}>
+              <AppBar>
+                  <Toolbar>
+                <IconButton
+                  size="large"
+                  edge="start"
+                  color="inherit"
+                  aria-label="open drawer"
+                  sx={{ mr: 2 }}
+                  onClick={toggleDrawer('left', true)}
                 >
-                  {tituloNav}
-                </Typography>
-              {search ? (
-                <ArrowBackIcon />
-              )
-              :
-              (
-              <Search>
-                <SearchIconWrapper>
-                  <SearchIcon />
-                </SearchIconWrapper>
-                <StyledInputBase
-                  placeholder="Search…"
-                  inputProps={{ 'aria-label': 'search' }}
-                  onChange={(e) => {setnamebook(e.target.value); props.getNameLibros(e.target.value)}}
-                  onKeyPress={(e) => pulsar(e)}
-                />
-              </Search>
-              )}
-            </Toolbar>
-            </AppBar>
-        </ElevationScroll>
-        <ScrollTop {...props}>
-            <Fab size="small" aria-label="scroll back to top">
-                <KeyboardArrowUpIcon />
-            </Fab>
-        </ScrollTop>
-    </Box>
+                  <MenuIcon />
+                </IconButton>
+                <Drawer
+                  anchor={'left'}
+                  open={state['left']}
+                  onClose={toggleDrawer('left', false)}
+                >
+                  {list('left')}
+                </Drawer>
+                  <Typography
+                    variant="h6"
+                    noWrap
+                    component="div"
+                    sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                  >
+                    {tituloNav}
+                  </Typography>
+                {search ? (
+                  <ArrowBackIcon />
+                )
+                :
+                (
+                <Search>
+                  <SearchIconWrapper>
+                    <SearchIcon />
+                  </SearchIconWrapper>
+                  <StyledInputBase
+                    placeholder="Search…"
+                    inputProps={{ 'aria-label': 'search' }}
+                    onChange={(e) => {setnamebook(e.target.value); props.getNameLibros(e.target.value)}}
+                    onKeyPress={(e) => pulsar(e)}
+                  />
+                </Search>
+                )}
+              </Toolbar>
+              </AppBar>
+          </ElevationScroll>
+          <ScrollTop {...props}>
+              <Fab size="small" aria-label="scroll back to top">
+                  <KeyboardArrowUpIcon />
+              </Fab>
+          </ScrollTop>
+      </Box>
+    </React.Fragment>
 	);
 }

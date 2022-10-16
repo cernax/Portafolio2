@@ -4,6 +4,7 @@ import WorkReference from './WorkReference';
 import Educations from './Education';
 import Contact from './Contact';
 import Skills from './Skills';
+import Badges from './Badges';
 import AOS from 'aos';
 import {useEffect} from "react";
 
@@ -14,7 +15,7 @@ export default function Perfiles() {
     },[] )
 
     return(
-        <div>
+        <div style={{ overflow:'hidden', paddingTop: '3%' }}>
             <br></br>
             <div>
                 <div data-aos="flip-down" >
@@ -50,9 +51,15 @@ export default function Perfiles() {
                     </Container>
                 </div>
                 <br/>
+                <div data-aos="zoom-in" data-aos-duration="1000">
+                    <Container maxWidth="lg" sx={{ display:'flex', boxShadow:'0 2px 5px 0 rgba(0,0,0,.25),0 3px 10px 0 rgba(0,0,0,.2)!important' }} >
+                        <Badges />
+                    </Container>
+                </div>
+                <br/>
                 <div data-aos="fade-up">
-                    <Container maxWidth="lg" sx={{ display:'flex', boxShadow:'0 2px 5px 0 rgba(0,0,0,.25),0 3px 10px 0 rgba(0,0,0,.2)!important', height:'380px' }} >
-                    <Contact />
+                    <Container maxWidth="lg" sx={{ display:'flex', boxShadow:'0 2px 5px 0 rgba(0,0,0,.25),0 3px 10px 0 rgba(0,0,0,.2)!important', height:'420px' }} >
+                        <Contact />
                     </Container>
                 </div>
             </div>
